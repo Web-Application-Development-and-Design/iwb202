@@ -1,0 +1,373 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: hwb(33 80% 2%);
+  color: #333; /* لون النص الرئيسي */
+  
+}
+
+.navbar {
+  background-color: #005f73; /* لون شريط التنقل */
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* عرض وارتفاع اللوغو مع التباعد نحو اليمين بمقدار معين */
+.logo {
+  width: 50px; /* قابل للتعديل */
+  height: 50px; /* قابل للتعديل */
+  margin-right: 10px;
+}
+/*فوتر اسفل الصفحة والخائص المطبقة عليه  */
+footer {
+  background-color: #005f73;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 2px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+/* اشارة الحقوق الملكية*/
+.copyright-symbol {
+  font-size: 18px;
+  color: #bbb;
+}
+
+  /*خاصية التباعد بين الفقرات و العنوانين */
+  h1, h2, p {
+    margin: 25px;
+  }
+  
+  /*الهيدر الاساسي لكل الصفحات مع الخائص المطبقة عليه*/
+  header {
+    background-color: #005f73;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /*حجم الخط والتباعد من الاسفل*/
+  li {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /*الخائص المطبقة على القائمة العلوية نفسها*/
+  li a, h1 a {
+    display: inline-block;
+    padding: 10px 14px;
+    color: #fff;
+    background-color: #00bbe0;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /*اللون المطبق عند المرور على الزر*/
+  li a:hover, h1 a:hover {
+    background-color: #CEA87B;
+  }
+  
+   /*الخائص المطبقة على القائمة العلوية*/
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  /* - المسافة التباعد للقائمة العلوية (الريسية -الكتب -من نحن -تفضل بزيارة الموقع */
+
+  nav li {
+    margin-right: 20px;
+  }
+  
+/*حركة اللوغو مع القائمة*/
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/*Main logo لوغو الاساسي*/
+.store-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+  
+  /* Main styles for main Page home.html */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  /*عرض الجدول*/
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+/* فواصل جدول الطلاب مع المدرس */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #005f73; /* لون خلفية الرأس  جدول الطلاب مع المدرس*/
+    color: white;
+}
+
+/* حركة جدول الطلاب*/
+tr:hover {
+    background-color: #CEA87B;
+}
+
+/*==================================book page css style============================================================*/
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+
+/*حجم الجدول*/
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+/*بيانات الاسم */
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.271);
+  top: 0%;
+  left: 0%;
+  z-index: 100;
+  position: fixed;
+  display: none;
+}
+/*اظهار بيانات الاسم */
+.modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body:has(.modal.show) {
+  overflow: hidden;
+}
+.modal form {
+  background-color: #FCD39E;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.modal form .form-but {
+  align-self: flex-end;
+  padding: 10px;
+  border: 0;
+  background-color: #059862;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.modal .close-but {
+  position: absolute;
+  background-color: transparent;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  cursor: pointer;
+}
+.modal .close-but svg {
+  width: 20px;
+  height: 20px;
+}
+.modal form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.modal form div input {
+  text-align: right;
+  padding: 10px 4px;
+  outline: none;
+}
+.modal form div input.invalid {
+  border: 1px solid red;
+}
+.but-continue {
+  background-color: #059862;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  margin-right: 20px;
+}
+.but-continue:disabled {
+  background-color: rgb(56, 56, 56, 0.5);
+  cursor: not-allowed;
+}
+.properties {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 192, 109, 0.486);
+  padding: 20px;
+  flex: 1 0 100%;
+  width: 100%;
+}
+.properties .row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.properties .details-row {
+  height: 0;
+  transition: 0.3s ease height;
+  overflow: hidden;
+}
+.properties .details-row.show {
+  height: auto;
+  border-bottom: 1px solid black;
+}
+
+.properties .details-row .details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px;
+  justify-content: space-between;
+  text-align: right;
+  gap: 20px;
+  max-width: 80%;
+  margin: 0 auto 20px;
+}
+.properties .details-row .details-wrapper img {
+  object-fit: cover;
+  width: 15%;
+}
+.properties .row.header {
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: 1px solid black;
+  font-size: 18px;
+}
+.properties .body {
+  border: 1px solid black;
+}
+.properties .body .row:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.properties .row .col {
+  width: 25%;
+  text-align: center;
+  &:last-child {
+    text-align: center;
+  }
+  &:nth-child(2) {
+    width: 50%;
+  }
+}
+
+.col-but {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 0;
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+
+.col-but.but-select {
+  padding: 10px;
+}
+.col-but.but-select.selected {
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+
+
+/*==================================About us  page css style============================================================*/
+.about-section {
+  padding: 50px 20px;
+}
+
+.about-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-section {
+  background-color: #4B4B4B;
+  color: #fff;
+  padding: 30px 20px;
+  margin: 10px;
+}
+.contact-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.contact-section a {
+  display: inline-block;
+  margin: 10px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.contact-section a:hover {
+  color: #ddd;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.social-icons a {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #4caf50;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
